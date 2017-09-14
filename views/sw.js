@@ -46,6 +46,16 @@ self.addEventListener('fetch', event => {
 
 self.addEventListener('sync', event => {
 	console.log('user agent sync', event)
+	if (isSWFormSync(event)) {
+		event.waitUntil(
+			doSWFormSync(event)
+				.then(() => console.log('sync succeeded'))
+				.catch(() => {
+					console.log('retry sync')
+					return Promise.reject(event)
+				})
+		)
+	}
 })
 
 self.addEventListener('push', event => {
