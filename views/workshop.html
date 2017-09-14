@@ -1,0 +1,22 @@
+{%- extends "base.html" -%}
+
+{%- block body -%}
+<h2>{{title}} door {{ instructors | join(' en ') }}</h2>
+
+{{ description | safe }}
+
+<table>
+	<tr>
+		<th>Datum</th>
+		<th>Tijdstip</th>
+		<th>Locatie</th>
+	</tr>
+	{% for event in dates %}
+		<tr class="odd">
+			<td><a href="/workshops/{{slug}}/{{event.dateSlug}}">{{event.dateFormatted}}</a></td>
+			<td>{{event.time}}</td>
+			<td>{{event.location}}</td>
+		</tr>
+	{% endfor %}
+</table>
+{%- endblock -%}

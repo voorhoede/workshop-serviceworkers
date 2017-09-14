@@ -1,0 +1,11 @@
+{% from "components/form/form.html" import signupForm %}
+{%- extends "base.html" -%}
+
+{%- block body -%}
+	<h2>{{titleShort}}, {{date.dateFormatted}}</h2>
+	<p>Geef je via het <a href="#formulier-1">onderstaande formulier</a> op voor de workshop <a href="/workshops/{{slug}}/">{{titleShort}}</a>, gehouden op {{date.dateFormatted}}, gegeven door {{instructors | join (' en ') }}.</p>
+     <h3>Locatie</h3>
+     <p>De workshop vindt plaats in {{date.location}}.</p>
+	{% set formTitle = "Geef je op voor de workshop " + title + " op " + date.dateFormatted %}
+	{{ signupForm(title=formTitle, hash="") }}
+{%- endblock -%}

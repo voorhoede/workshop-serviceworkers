@@ -1,0 +1,31 @@
+{%- extends "base.html" -%}
+
+{%- block body -%}
+<h2>Workshops</h2>
+ <p>Fronteers verzorgt workshops en is als vereniging afhankelijk van wie er beschikbaar is binnen de eigen gelederen om een workshop te geven. Afhankelijk van de beschikbaarheid van trainers verzorgen we workshops van beginners niveau tot en met expert niveau.</p>
+{#  <ul>
+  <li><a href="/workshops/voor-trainers">Meer informatie voor trainers</a></li>
+  <li><a href="/workshops/voor-deelnemers">Meer informatie voor deelnemers</a></li>
+ </ul> #}
+ <p>Fronteers geeft de volgende workshop(s). Het aantal vrije plaatsen in de laatste kolom is slechts een indicatie.</p>
+ <table>
+  <caption>Komende workshops</caption>
+  <tbody><tr>
+   <th>Workshop</th>
+   <th>Locatie</th>
+   <th>Datum</th>
+  </tr>
+  {% for workshop in workshops %}
+		<tr class="odd">
+			<th><a href="/workshops/{{workshop.slug}}">
+				{{workshop.title}}
+			</a></th>
+			<td>{{workshop.dates[0].location}}</td>
+			<td><a href="/workshops/{{workshop.slug}}/{{workshop.dates[0].dateSlug}}">
+				{{workshop.dates[0].dateFormatted}}
+			</a></td>
+		</tr>
+	{% endfor %}
+ </tbody>
+</table>
+{%- endblock -%}

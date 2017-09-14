@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="nl">
+ <head>
+  <meta charset="utf-8">
+  <title>Service Workers 101, 2 juni 2017 · Fronteers</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="/_css/fronteers.css?v=2016">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="alternate" type="application/rss+xml" href="http://feeds.feedburner.com/FronteersWeblog" title="Fronteers weblog">
+  <link rel="alternate" type="application/rss+xml" href="http://feeds.feedburner.com/FronteersWeblogLaatsteReacties" title="Fronteers weblog: laatste reacties">
+  <link rel="alternate" type="application/rss+xml" href="http://feeds.feedburner.com/FronteersBijeenkomsten" title="Fronteers bijeenkomsten">
+  <link rel="alternate" type="application/rss+xml" href="http://feeds.feedburner.com/FronteersVacaturebank" title="Fronteers vacaturebank">
+  <link rel="alternate" type="application/rss+xml" href="http://feeds.feedburner.com/FronteersWorkshops" title="Fronteers workshops">
+  <link rel="alternate" type="application/rss+xml" href="http://feeds.feedburner.com/FronteersCongres" title="Fronteers conference">
+  <link rel="shortlink" href="http://frnt.rs/p1957">
+ </head>
+ <body id="fronteers-nl">
+  <div id="container">
+   <div id="main">
+    <h1><a href="/"><img src="/_img/badges/fronteers-logo-300dpi.png" width="300" alt="Fronteers — vakvereniging voor front-end developers"></a></h1>
+    <div class="section">
+     <h2>Service Workers 101, 2 juni 2017</h2>
+     <p>Geef je via het <a href="#formulier-1">onderstaande formulier</a> op voor de workshop <a href="/workshops/service-workers-101">Service Workers 101</a>, gehouden op 2 juni 2017, gegeven door De Voorhoede.</p>
+     <p>Lees voordat je je inschrijft ook even <a href="/workshops/voor-deelnemers">onze voorwaarden</a>.</p>
+     <h3>Locatie</h3>
+     <p>De Grote Werf<br>Oudegracht 201<br>3511 NG Utrecht</p>
+     <h3>Deelnemers</h3>
+     <ul>
+      <li>Rowdy Rabouw</li>
+      <li>Tom Greuter</li>
+     </ul>
+     <form action="/workshops/service-workers-101/2-juni-2017#formulier-1" method="post" id="formulier-1" class="generated">
+      <fieldset>
+       <legend>Geef je op voor de workshop Service Workers 101 op 2 juni 2017 in Utrecht</legend>
+       <p>
+        <label for="form-1-input-0">Naam</label>
+        <input type="text" name="Naam" id="form-1-input-0" class="text">
+       </p>
+       <p>
+        <label for="form-1-input-1">E-mailadres</label>
+        <input type="text" name="E-mailadres" id="form-1-input-1" class="text">
+       </p>
+       <p>
+        <label for="form-1-input-2">Telefoonnummer</label>
+        <input type="text" name="Telefoonnummer" id="form-1-input-2" class="text">
+       </p>
+       <fieldset>
+        <legend><span>Ben je lid van Fronteers</span></legend>
+        <ul>
+         <li>
+          <label for="form-1-input-3">
+           <input type="radio" name="Ben_je_lid_van_Fronteers" value="Ja" class="radio" id="form-1-input-3">
+           Ja
+          </label>
+         </li>
+         <li>
+          <label for="form-1-input-4">
+           <input type="radio" name="Ben_je_lid_van_Fronteers" value="Nee" class="radio" id="form-1-input-4">
+           Nee
+          </label>
+         </li>
+         <li>
+          <label for="form-1-input-5">
+           <input type="radio" name="Ben_je_lid_van_Fronteers" value="Ik heb me net aangemeld als lid en maak gebruik van het combiaanbod, zie hiervoor de voorwaarden" class="radio" id="form-1-input-5">
+           Ik heb me net aangemeld als lid en maak gebruik van het combiaanbod, zie hiervoor de voorwaarden
+          </label>
+         </li>
+        </ul>
+       </fieldset>
+       <p>
+        <label for="form-1-input-6">E-mailadres voor de factuur</label>
+        <input type="text" name="E-mailadres_voor_de_factuur" id="form-1-input-6" class="text">
+       </p>
+       <p>
+        <label for="form-1-input-7">Factuuradres inclusief eventuele bedrijfsnaam</label>
+        <textarea name="Factuuradres_inclusief_eventuele_bedrijfsnaam" id="form-1-input-7" cols="50" rows="5" class="small"></textarea>
+       </p>
+       <p>
+        <label for="form-1-input-8">Kenmerk <em>optioneel, bijvoorbeeld een inkoopnummer</em></label>
+        <input type="text" name="Kenmerk" id="form-1-input-8" class="text">
+       </p>
+       <p>
+        <label for="form-1-input-9">Hoe heb je deze workshop gevonden?</label>
+        <select name="Hoe_heb_je_deze_workshop_gevonden" id="form-1-input-9">
+         <option value="Via fronteers.nl">Via fronteers.nl</option>
+         <option value="Via twitter">Via twitter</option>
+         <option value="De workshop mailinglist">De workshop mailinglist</option>
+         <option value="Via Google">Via Google</option>
+         <option value="Via een collega of kennis">Via een collega of kennis</option>
+         <option value="Anders">Anders</option>
+        </select>
+       </p>
+       <p>
+        <label for="form-1-input-10">Opmerkingen</label>
+        <textarea name="Opmerkingen" id="form-1-input-10" cols="50" rows="5" class="small"></textarea>
+       </p>
+       <fieldset>
+        <legend><span>Mijn naam mag op de publieke deelnemerslijst:</span></legend>
+        <ul>
+         <li>
+          <label for="form-1-input-11">
+           <input type="radio" name="Mijn_naam_mag_op_de_publieke_deelnemerslijst" value="Ja" class="radio" id="form-1-input-11">
+           Ja
+          </label>
+         </li>
+         <li>
+          <label for="form-1-input-12">
+           <input type="radio" name="Mijn_naam_mag_op_de_publieke_deelnemerslijst" value="Nee" class="radio" id="form-1-input-12">
+           Nee
+          </label>
+         </li>
+        </ul>
+       </fieldset>
+       <fieldset>
+        <legend><span>Akkoord met de voorwaarden:</span></legend>
+        <ul>
+         <li>
+          <label for="form-1-input-13">
+           <input type="checkbox" name="Akkoord_met_de_voorwaarden_Ja" value="Ja" class="checkbox" id="form-1-input-13">
+           Ja
+          </label>
+         </li>
+        </ul>
+       </fieldset>
+       <p>
+        <label for="form-1-spam-check">Is dit spam? <em>Nee invullen</em></label>
+        <input type="text" name="spam-check" id="form-1-spam-check" class="text spam-check">
+       </p>
+       <p class="submit">
+        <input type="hidden" name="frm" value="1">
+        <input type="hidden" name="hsh" value="73434c8b2e08b2b1c7b6796004d3f6d2">
+        <input type="hidden" name="ref" value="https://fronteers.nl/workshops/service-workers-101">
+        <input type="submit" name="submitted" value="Verstuur" class="submit">
+       </p>
+      </fieldset>
+     </form>
+    </div>
+   </div>
+   <div id="submenu">
+    <div>
+     <form method="get" action="//www.google.nl/search">
+      <h2><label for="q">Zoeken</label></h2>
+      <p>
+       <input name="q" id="q" type="search">
+       <input type="hidden" name="sitesearch" value="fronteers.nl">
+       <input type="hidden" name="ie" value="UTF-8">
+       <input type="hidden" name="oe" value="UTF-8">
+       <input type="hidden" name="hl" value="nl">
+      </p>
+     </form>
+    </div>
+    <div>
+     <h2>Komende workshops</h2>
+     <ul>
+      <li class="current"><a href="/workshops/service-workers-101" class="current">Service Workers 101, 2 juni 2017</a></li>
+      <li><a href="/workshops/inclusive-design-accessibility-peter-van-grieken">Inclusive Design & Accessibility, 30 juni 2017</a></li>
+      <li><a href="/workshops/practical-webgl-with-threejs-martin-splitt">Practical WebGL with three.js, 28 juli 2017</a></li>
+     </ul>
+    </div>
+    <div>
+     <h2>Alle workshops</h2>
+     <ul>
+      <li><a href="/workshops/adaptief-ontwikkelen-vasilis-van-gemert" title="Workshop: Adaptief Ontwikkelen, door Vasilis van Gemert">Adaptief Ontwikkelen</a></li>
+      <li><a href="/workshops/advanced-sass-roy-tomeij" title="Workshop: Advanced Sass, door Roy Tomeij">Advanced Sass</a></li>
+      <li><a href="/workshops/up-and-running-with-angularjs-sander-elias" title="Workshop: Up and running with AngularJS, door Sander Elias">AngularJS voor beginners</a></li>
+      <li><a href="/workshops/counter-space-jeroen-visser" title="Workshop: Counter Space, door Jeroen Visser">Counter Space</a></li>
+      <li><a href="/workshops/css-positionering-peter-paul-koch" title="Workshop: CSS Positionering, door Peter-Paul Koch">CSS Positionering</a></li>
+      <li><a href="/workshops/design-voor-developers-wes-oudshoorn" title="Workshop: Design voor developers, door Wes Oudshoorn">Design voor developers</a></li>
+      <li><a href="/workshops/future-css-bert-bos" title="Workshop: Future CSS, door Bert Bos">Future CSS</a></li>
+      <li><a href="/workshops/grunt-voor-beginners-tom-greuter" title="Workshop: Grunt voor beginners, door Tom Greuter">Grunt voor beginners</a></li>
+      <li><a href="/workshops/html-css-frances-de-waal" title="Beginnersworkshop: HTML/CSS, door Frances de Waal">HTML/CSS</a></li>
+      <li><a href="/workshops/inclusive-design-jeroen-hulscher" title="Workshop: Inclusive Design, door Jeroen Hulscher">Inclusive Design</a></li>
+      <li><a href="/workshops/interactieve-visualisaties-arjan-eising" title="Workshop: Interactieve visualisaties - met webtechnieken zoals CSS, SVG en Canvas, door Arjan Eising">Interactieve visualisaties</a></li>
+      <li><a href="/workshops/javascript-achtbaan-peter-van-der-zee" title="Workshop: JavaScript Achtbaan, door Peter van der Zee">JavaScript Achtbaan</a></li>
+      <li><a href="/workshops/jquery-inception-arjan-eising" title="Workshop: jQuery Inception, door Arjan Eising">jQuery Inception</a></li>
+      <li><a href="/workshops/mobiel-web-frances-de-waal" title="Workshop: Mobiel Web, door Frances de Waal">Mobiel Web</a></li>
+      <li><a href="/workshops/praktisch-html5-peter-beverloo" title="Workshop: Praktisch HTML5, door Peter Beverloo">Praktisch HTML5</a></li>
+      <li><a href="/workshops/rabid-prototyping-stephen-hay" title="Workshop: Rabid Prototyping, door Stephen Hay">Rabid Prototyping</a></li>
+      <li><a href="/workshops/responsive-design-frances-de-waal" title="Workshop: Responsive design door Frances de Waal">Responsive design</a></li>
+      <li><a href="/workshops/screw-css-roy-tomeij" title="Workshop: Screw CSS! door Roy Tomeij">Screw CSS!</a></li>
+      <li><a href="/workshops/terminally-chill-jan-moesen" title="Workshop: Terminally Chill, door Jan Moesen">Terminally Chill</a></li>
+      <li><a href="/workshops/viewports-peter-paul-koch" title="Workshop: Viewports, door Peter-Paul Koch">Viewports</a></li>
+      <li><a href="/workshops/toegankelijk-bouwen-voor-front-enders-jules-ernst" title="Workshop: Toegankelijk bouwen voor webontwikkelaars, door Jules Ernst">Toegankelijk bouwen voor webontwikkelaars</a></li>
+      <li><a href="/workshops/angularjs-1-door-rachel-heimbach" title="Workshop: AngularJS 1, door Rachèl Heimbach">AngularJS 1</a></li>
+      <li><a href="/workshops/angular-2-rachel-heimbach" title="Workshop: Angular 2, door Rachèl Heimbach">AngularJS 2</a></li>
+      <li><a href="/workshops/that-mess-called-css-door-hans-grimm">That mess called CSS</a></li>
+      <li><a href="/workshops/es2015-chiel-kunkels" title="Workshop: ES2015 door Chiel Kunkels">ES2015</a></li>
+      <li><a href="/workshops/creatieve-data-visualisatie-nadieh-bremer" title="Workshop: Creatieve Data Visualisatie Technieken door Nadieh Bremer">Creatieve Data Visualisatie Technieken</a></li>
+      <li class="current"><a href="/workshops/service-workers-101" title="Workshop: Service Workers 101 door Anne Fortuin en Jurgen Beliën" class="current">Service Workers 101</a></li>
+      <li><a href="/workshops/inclusive-design-accessibility-peter-van-grieken" title="Workshop: Inclusive Design &amp; Accessibility door Peter van Grieken">Inclusive Design &amp; Accessibility</a></li>
+      <li><a href="/workshops/practical-webgl-with-threejs-martin-splitt" title="Workshop: Practical WebGL with three.js door Martin Splitt">Practical WebGL with three.js door Martin Splitt</a></li>
+     </ul>
+    </div>
+    <div id="feeds">
+     <h2 lang="en">Feeds</h2>
+     <ul>
+      <li><a href="http://feeds.feedburner.com/FronteersWorkshops" type="application/rss+xml">Workshops (<abbr>RSS</abbr>)</a></li>
+     </ul>
+    </div>
+   </div>
+   <ul id="menu">
+    <li id="menu-home"><a href="/">Home</a></li>
+    <li id="menu-vereniging"><a href="/vereniging">Vereniging</a></li>
+    <li id="menu-bijeenkomsten"><a href="/bijeenkomsten">Bijeenkomsten</a></li>
+    <li id="menu-workshops" class="current has-submenu"><a href="/workshops" class="current">Workshops</a>
+     <ul>
+      <li><a href="/workshops/voor-deelnemers">Info deelnemers</a></li>
+      <li><a href="/workshops/voor-trainers">Info trainers</a></li>
+     </ul>
+    </li>
+    <li id="menu-leden"><a href="/leden">Ledenlijst</a></li>
+    <li id="menu-inschrijven"><a href="/inschrijven">Inschrijven</a></li>
+    <li id="menu-blog"><a href="/blog">Weblog</a></li>
+    <li id="menu-contact"><a href="/contact">Contact</a></li>
+    <li id="menu-congres"><a href="/congres">Conference</a></li>
+    <li id="menu-vacaturebank"><a href="/vacaturebank">Vacaturebank</a></li>
+    <li id="menu-videos"><a href="/videos">Video's</a></li>
+    <li id="menu-communityondersteuning"><a href="/communityondersteuning">Ondersteuning</a></li>
+    <li id="menu-forum"><a href="https://forum.fronteers.nl/">Forum</a></li>
+   </ul>
+  </div>
+  <script>
+   (function() {
+    "use strict";
+    var i, j, tellCSS;
+    var antiSpamElements = document.querySelectorAll && document.querySelectorAll('.spam-check');
+    if (antiSpamElements) {
+     for (i = 0; i < antiSpamElements.length; i++) {
+      antiSpamElements[i].value = 'Nee';
+      antiSpamElements[i].parentNode.style.display = 'none';
+     }
+    }
+    var lis = document.querySelectorAll && document.querySelectorAll('li.current');
+    if (lis) {
+     var markers = [];
+     for (i = 0; i < lis.length; i++) {
+      var li = lis[i], ul = li.parentNode, top = li.offsetTop;
+      if (ul.parentNode.tagName.toLowerCase() == 'li') {
+       ul = ul.parentNode.parentNode;
+      }
+      var marker = document.createElement('li'), as = ul.querySelectorAll('a'), a;
+      markers.push({
+       top: top,
+       marker: marker,
+       mark: function(element) {
+        this.marker.style.webkitTransform = this.marker.style.mozTransform = this.marker.style.msTransform = this.marker.style.transform = 'translateY(' + (element.offsetTop - this.top) + 'px)';
+       },
+       unmark: function() {
+        this.marker.style.webkitTransform = this.marker.style.mozTransform = this.marker.style.msTransform = this.marker.style.transform = 'translateY(0)';
+       }
+      });
+      for (j = 0; j < as.length; j++) {
+       a = as[j];
+       a.setAttribute('marker', i);
+       a.onmouseover = a.onfocus = function() {
+        markers[this.getAttribute('marker')].mark(this.parentNode);
+       };
+       a.onmouseout = a.onblur = function() {
+        markers[this.getAttribute('marker')].unmark();
+       };
+       a.onclick = function() {
+        markers[this.getAttribute('marker')].unmark = function(){};
+       }
+      }
+      marker.innerHTML = '<span>​</span>';
+      marker.className = 'mark';
+      marker.style.top = top + 'px';
+      ul.appendChild(marker);
+     }
+     tellCSS = true;
+    }
+    if (tellCSS) {
+     document.documentElement.className = 'js-enabled';
+    }
+   })();
+  </script>
+ </body>
+</html>
