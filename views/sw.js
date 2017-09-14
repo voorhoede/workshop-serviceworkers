@@ -8,6 +8,14 @@ console.log(`Hi! I'm a service worker from ${self.origin}`)
 //
 self.addEventListener('install', event => {
 	console.log('sw install', event)
+
+	// @todo
+	// - Define a list of resources-to-cache
+	// - Open a cache
+	// - Add all resources to the cache
+	// - Make sure SW waits until it should stop waiting!
+	//
+	// - Bonus: cache only what you have visited
 })
 
 self.addEventListener('activate', event => {
@@ -19,6 +27,12 @@ self.addEventListener('activate', event => {
 //
 self.addEventListener('fetch', event => {
 	console.log('user agent fetch', event.request, event)
+
+	// @todo
+	// - Respond with the cached request...
+	// - ...or go to the network
+	//
+	// - Bonus: serve an offline page
 })
 
 self.addEventListener('sync', event => {
