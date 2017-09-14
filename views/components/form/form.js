@@ -27,11 +27,10 @@ export function enhance(element) {
 		event.preventDefault()
 		console.log('the form was submitted')
 
-		// @todo
-		// - Let's ask for permission to do push notifications (hint: we already built that!)
-		// - Then, if the service worker is ready
-		// - Register a sync event to handle the form entry (hint: we did most of the work below!)
-		// - Don't forget to have a fallback if stuff fails!
+		registerSWPushNotification()
+			.then(() => navigator.serviceWorker.ready)
+			.then(registration => registerSWFormSync(element, registration))
+			.catch(() => element.submit())
 	}
 
 	return element
@@ -60,20 +59,18 @@ export function doSWFormSync(event) {
 		.then(formData => {
 			console.log('formData ready to go')
 
-			// @todo
-			// - Now that we retrieved the formData from idb, we should post it to the server
-			// - (the endpoint is `action`)
-			// - and return the fetch call into the Promise chain
-
+			return fetch(action, {
+				method: 'POST',
+				body: formData
+			})
 		}).then(response => {
-
-			// @todo
-			// - Let's check if the server response came back ok
-			// - If so, we can send a push notification!
-			// - ...and delete the entry from idb
-			// - Shirley, we should also resolve the Promise!
-			// - ...unless the server's response wasn't ok, then we reject it
-
+			if (response.ok) {
+				sw.showNotification('Form successfully submitted')
+				idbKeyval.delete(tag)
+				return Promise.resolve(response)
+			} else {
+				return Promise.reject(response.error)
+			}
 		})
 }
 
@@ -97,8 +94,6 @@ function registerSWFormSync(form, registration) {
 
 	console.log('register sync')
 
-	// @todo
-	// - Store the formEntries into idb
-	// - ...and register our tag on the SyncManager
-	// - Hey, and return it, because it's part of a Promise chain elsewhere!
+	idbKeyval.set(tag, formEntries)
+	return registration.sync.register(tag)
 }
