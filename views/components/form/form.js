@@ -78,7 +78,7 @@ function registerSWPushNotification() {
 	return Notification.requestPermission()
 		.then(result => {
 			if (result !== 'granted') {
-				Promise.reject('No permission to send push notification')
+				return Promise.reject('No permission to send push notification')
 			}
 		})
 }
@@ -94,6 +94,6 @@ function registerSWFormSync(form, registration) {
 
 	console.log('register sync')
 
-	idbKeyval.set(tag, formEntries)
-	return registration.sync.register(tag)
+	return idbKeyval.set(tag, formEntries)
+		.then(registration.sync.register(tag))
 }
